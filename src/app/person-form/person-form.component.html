@@ -1,0 +1,13 @@
+<form [formGroup]="personForm">
+    <input formControlName="fullName" placeholder="Full Name">
+    <input formControlName="phoneNumber" placeholder="Phone Number">
+    <input formControlName="address" placeholder="Address">
+    <input formControlName="city" placeholder="City">
+    <input formControlName="state" placeholder="State">
+    <input formControlName="zipCode" placeholder="Zip Code">
+    <div id="btn"> <button id="btn1" type="button" (click)="addOrUpdatePerson()">
+      {{ isEditing ? 'Update' : 'Add' }}
+    </button>
+    <button id="btn2" type="button" (click)="personForm.reset()">Reset</button></div>
+  
+  </form>

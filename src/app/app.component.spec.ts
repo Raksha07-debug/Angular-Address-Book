@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Address-Book' title`, () => {
+  it(`should have the 'Angular_AddressBook' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Address-Book');
+    expect(app.title).toEqual('Angular_AddressBook');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Address-Book');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Angular_AddressBook');
   });
 });

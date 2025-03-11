@@ -1,0 +1,23 @@
+<main *ngIf="!showForm" >
+
+    <div id="head">
+      <div class="person-name">Fullname</div>
+      <div class="person-address">Address</div>
+      <div class="person-city">City</div>
+      <div class="person-state">State</div>
+      <div class="person-zip">Zip Code</div>
+      <div class="person-phone">Phone Number</div>
+    </div>
+
+    <div *ngFor="let person of persons; let i = index" class="person-card">
+      <div class="person-name">{{ person.fullName }}</div>
+      <div class="person-address">{{ person.address }}</div>
+      <div class="person-city">{{ person.city }}</div>
+      <div class="person-state">{{ person.state }}</div>
+      <div class="person-zip">{{ person.zipCode }}</div>
+      <div class="person-phone">{{ person.phoneNumber }}</div>
+     <button (click)="deletePerson(i)">🗑️</button>
+<button (click)="editPerson(person, i)">🖋️</button>
+    </div>
+  </main>
+  <app-person-form *ngIf="showForm"  (formClosed)="closeForm()"></app-person-form>
